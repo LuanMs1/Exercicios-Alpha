@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 
 <html>
+    <!- The second activity for HTML->
     <head>
         <meta charset="UTF-8" />
         <title>My cats</title>
         <style>
             .center{
                 text-align: center;
+                margin-left:auto;
+                margin-right:auto;
             }
             .imgsize{
                 width: 150px;
                 height: 150px;
+            }
+            
+            tr:nth-child(even) {
+            background-color: #f2f2f2;
+            }
+            caption{
+                background-color: grey;
+            }
+            table, th, td, caption{
+                border: 1px solid black;
             }
         </style>
     </head>
@@ -35,9 +48,11 @@
         </p>
         <br />
         <br />
-        <table>
+        <div class="center">
+        <table class="center">
+            <caption style="font-size: larger;"><b>All my cats</b></caption>
             <tr>
-                <th>Cat name</th>
+                <th> Name</th>
                 <th> Age </th>
                 <th> Color </th>
                 <th> Characteristic </th>
@@ -67,6 +82,7 @@
                 <td> the elder</td>
             </tr>
         </table>
+        </div>
         <br />
         <br />
 
@@ -74,9 +90,10 @@
             Now, let me show you each one, and talk a little about then. You can click on the 
             images to open a bigger image in another tab.
         </p>
+        <br />
 
         <h2>Pandora</h2>
-        <a href="imagens/pandora.jpeg" target="_blank"><img src="imagens/pandora.jpeg" ; style="width:10%" /> </a>
+        <div class="center"><a href="imagens/pandora.jpeg" target="_blank"><img src="imagens/pandora.jpeg" ; style="width:10%" /> </a></div>
         <p>
             Pandora is the hunter of the cat family, and the middle one, daughter of Nevinha
             and mother of mel. But don't be afraid, she is lovely, will rub on your hand and knees,
