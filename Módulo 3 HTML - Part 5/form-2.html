@@ -15,7 +15,7 @@
             border:1px solid #ccc;
             border-radius: 1em;
 
-            background-color:rgba(35, 96, 211, 0.404);
+            background-color:rgba(49, 131, 224, 0.384);
         }
         
         /* putting some margins on the divs */
@@ -40,8 +40,9 @@
             border:1px solid #999;
         }
         textarea{
-            height:100px;
-            width:300px ;
+            height:7em;
+            width:20em ;
+            vertical-align: top;
         }
         
         ul{
@@ -49,7 +50,7 @@
             padding:0;
             list-style:none;
         }
-        
+
         /*creating a class to highligh the topics of the form*/
         .topic{
             border:1px solid rgba(0, 0, 0, 0.692);
@@ -79,24 +80,26 @@
             </div>
             <div>
                 <label for="pets-race" class="topic">Which kind of pet you own?</label>
+                <fieldset style = "width: 423px;">
                 <ul>
                     <li>
                         <input type="checkbox" id="cat" name="cat" />
-                        <label for="cat" style="font-weight:normal">Cat</label>
+                        <label for="cat" style="font-weight:normal;width:399px;">Cat</label>
                     </li>
                     <li>
                         <input type="checkbox" id="dog" name="dog" />
-                        <label for="dog" style="font-weight:normal">Dog</label>
+                        <label for="dog" style="font-weight:normal;width:399px;">Dog</label>
                     </li>
                     <li>
                         <input type="checkbox" id="fish" name="fish" />
-                        <label for="fish" style="font-weight:normal">Fish</label>
+                        <label for="fish" style="font-weight:normal;width:398px;">Fish</label>
                     </li>
                     <li>                        
                         <input type="checkbox" id="other-animal" name="other-animal"/>
-                        <label for="other-animal" style="font-weight:normal">Other</label>
+                        <label for="other-animal" style="font-weight:normal;width:397px;">Other</label>
                     </li>
                 </ul>
+                </fieldset>
             </div>
             <div>
                 <label for="pets-story" class="topics">Tell us about your pets</label> <br />
@@ -104,16 +107,19 @@
             </div>
             <div>
                 <label for="new-pets" class="topic">Do you want to have new pets?</label>
+                <fieldset style="width:423px">
+                <legend> yes or no?</legend>
                 <ul>
                     <li>
                         <input type="radio" id="ido" name="new-pets">
-                        <label for="ido" style="font-weight:normal">Yes</label>
+                        <label for="ido" style="font-weight:normal;width:398px;">Yes</label>
                     </li>
                     <li>                        
                         <input type="radio" id="idont" name="new-pets">
-                        <label for="idont" style="font-weight:normal">No</label>
+                        <label for="idont" style="font-weight:normal;width:398px;">No</label>
                     </li>
-                </ul>         
+                </ul>   
+                </fieldset>      
             </div>
             <div>
                 <label for="next-pet" class="topic">If you pretend do have new pets, which one will you get next?</label>
