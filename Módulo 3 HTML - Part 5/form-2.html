@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            margin:0 auto;
+            width: 500px;
+
+            padding:1em;
+            border:1px solid #ccc;
+            border-radius: 1em;
+
+            background-color:rgba(35, 96, 211, 0.404);
+        }
+        form div+div{
+            margin-top:1em;
+        }
+        div{
+            margin-top:15px;
+            margin-bottom:10px;
+        }
+        label{
+            display:inline-block;   
+            width: 450px;
+            text-align: left;
+            font-weight:600;
+        }
+        ul{
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        input, textarea{
+            font:1em sans-serif;
+
+            border:1px solid #999;
+        }
+        textarea{
+            height:100px;
+            width:300px ;
+        }
+        .topic{
+            border:1px solid rgba(0, 0, 0, 0.692);
+            background-color:rgba(18, 108, 182, 0.61);
+            margin-bottom:3px;
+            border-radius:3px;
+        }
+    </style>
+</head>
+<body>
+    <!--definindo formulário-->
+    <form action="" method="post">
+
+        <fieldset style="border:none">
+            <h1 style="text-align:center">PETS FORMS</h1>
+            <p>required fields are followed by <abbr title="required">*</abbr>.</p>
+            
+            <div style="margin-bottom:10px">
+                <label for="name" class="topic">Owner name:
+                    <abbr title="required" aria-label="required">*</abbr>
+                </label><br />
+                <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+                <label for="date" class="topic">Birthday:</label>
+                <input type="date" id="date" name="date" />
+            </div>
+            <div>
+                <label for="pets-race" class="topic">Which kind of pet you own?</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="cat" name="cat" />
+                        <label for="cat" style="font-weight:normal">Cat</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="dog" name="dog" />
+                        <label for="dog" style="font-weight:normal">Dog</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="fish" name="fish" />
+                        <label for="fish" style="font-weight:normal">Fish</label>
+                    </li>
+                    <li>                        
+                        <input type="checkbox" id="other-animal" name="other-animal"/>
+                        <label for="other-animal" style="font-weight:normal">Other</label>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <label for="pets-story" class="topics">Tell us about your pets</label> <br />
+                <textarea id="pets-story" name="pets-story"> type your text here</textarea>
+            </div>
+            <div>
+                <label for="new-pets" class="topic">Do you want to have new pets?</label>
+                <ul>
+                    <li>
+                        <input type="radio" id="ido" name="new-pets">
+                        <label for="ido" style="font-weight:normal">Yes</label>
+                    </li>
+                    <li>                        
+                        <input type="radio" id="idont" name="new-pets">
+                        <label for="idont" style="font-weight:normal">No</label>
+                    </li>
+                </ul>         
+            </div>
+            <div>
+                <label for="next-pet" class="topic">If you pretend do have new pets, which one will you get next?</label>
+                <p>
+                <select if="next-pet" name="next-pet">
+                    <option>Cat</option>
+                    <option>Dog</option>
+                    <option>Fish</option>
+                    <option>Other</option>
+                    <option>I don't want a new pet</option>
+                </select>
+                </p>
+            </div>
+
+            
+            <fieldset>
+                <legend>Owner contact</legend>
+                <div>
+                    <label for="e-mail" class="topic">Email:<abbrtitle="required aria-label="required">*</abbr></label>
+                    <input type="email" id="e-mail" name="i-mail" required />
+                </div>
+                <div>
+                    <label for="telnumber" class="topic">number:<abbr title="required" aria-label="required">*</abbr></label>
+                    <input type="tel" id="telnumber" name="telnumber" required />
+                </div>
+            </fieldset>
+            <div>
+                <label for="satisfaction" class="topic">How much did you liked the form?</label> <br />
+                <input type="range" id="satisfaction" name="satisfaction" />
+            </div>
+            <div>
+                <label for="pswd" class="topic">Please, enter the secure tag:</label><br />
+                <input type="password" id="pswd" name="pswd" />
+            </div>
+            <div>
+                <input type="reset" />
+                <input type="submit" />
+            </div>
+        </fieldset>
+        
+    </form>
+    
+</body>
+</html>
