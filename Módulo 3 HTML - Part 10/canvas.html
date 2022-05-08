@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h2>Puting a hidden image in a canvas</h2>
+    <img id="scream" src="banderinha.png"style="display:none;">
+    <canvas id="myCanvas" width="300" height="300">
+    </canvas><br />
+    </div>
+    <div>
+    <h2>Displaying a image in a canvas using a path</h2>
+
+    <canvas id="secondCanvas" width="300" height="300"></canvas>
+    </div>
+    <script>
+        // execute the funciont after the page loads
+    window.onload = function() {
+        // using the id of a hidden image to show it in the canvas
+      var c = document.getElementById("myCanvas");
+      var ctx = c.getContext("2d");
+      var img = document.getElementById("scream");
+      ctx.drawImage(img, 0, 0);
+
+      // using the path of the image to show it in the canvas
+      var sc = document.getElementById("secondCanvas");
+      var sCtx = sc.getContext('2d');
+      var imgObj = new Image();
+      imgObj.src = 'banderinha.png';
+      sCtx.drawImage(imgObj,0,0);
+
+    }
+    </script>
+</body>
+</html>
