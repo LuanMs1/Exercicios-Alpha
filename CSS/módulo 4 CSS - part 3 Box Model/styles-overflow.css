@@ -1,0 +1,64 @@
+#content{
+    display: flexbox;
+}
+
+body{
+    background-image: url(wanted.jpg);
+}
+
+.portrait{
+    background-color: black;
+    height:600px;
+    width: 400px;
+    overflow: hidden;
+    border:solid 1px black;
+    position: relative;
+    
+}
+.portrait#chopper{
+    overflow-x:scroll;
+}
+.portrait#zoro{
+    overflow:auto;
+}
+.portrait#sanji{
+    width: 400px;
+    overflow-y: scroll;
+    
+}
+
+
+.portrait img{
+    width: auto;
+    height: 100%;
+}
+
+.show{
+    display:inline-flex;
+    flex-direction: column;
+}
+.show h1{
+    text-align: center;
+    color:white;
+    background-color: black;
+}
+
+
+
+#luffy-pic{
+    position: absolute;
+    left:-400px;
+}
+
+/* #zoro-pic{
+    position: absolute;
+    left:-400px;
+
+} */
+
+#sanji-pic{
+    position:absolute;
+    height:1000px;
+    left:-50px;
+}
+
