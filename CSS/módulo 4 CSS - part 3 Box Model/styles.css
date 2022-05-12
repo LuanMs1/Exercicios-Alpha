@@ -1,0 +1,63 @@
+span{
+    background-color:yellow;
+    /* width and height nada acontece */
+    width: 500px;
+    height: 100px;
+    /* padding horizontal estende a caixa e afasta as outras box inline
+     crescendo a caixa     */
+    padding-right: 100px;
+    padding-left: 100px;
+
+    /* margin verticais não tem efeito */
+    margin-bottom: 100px;
+    margin-top:100px;
+
+
+    
+}
+span#primeiro{
+    padding-top: 10px;
+}
+span#segundo{
+    background-color: green;
+    
+    /* padding verticais extende as edições da caixa, mas n afasta
+    as proximas caixas */
+    padding-bottom: 22px
+}
+span#between{
+    padding-top:20px;
+}
+.firstDivS span{
+    /* margin horizontais afastam as outras div inlines e não estende
+    as decorações */
+    margin-right: 50px;
+
+}
+p{
+    background-color: red;
+}
+
+p#primeiro{
+    /* padding vertical estende a decoração na direção e mantem o texto no lugar relativo
+    tambem afastam outras caixas */
+    padding-top:10px;
+    padding-bottom:20px;
+    
+    /* padding horizontais afastam o texto e mantem a decoração alem de forçar quebra de linhas no
+    texto */
+    padding-left:100px;
+    padding-right:1200px;
+    
+}
+
+p#segundo{
+    /* width altera o tamanho da caixa, mas mantem as propriedade do box type, nao agrupando do lado outras caixas */
+    width: 500px;
+    /* height altera a altura da caixa mantendo o conteudo na parte superior. e afastando outras caixas. */
+    height: 300px;
+}
+
+p#terceiro{
+    width:300px;
+}
