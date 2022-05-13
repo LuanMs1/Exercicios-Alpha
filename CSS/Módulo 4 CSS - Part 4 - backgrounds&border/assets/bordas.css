@@ -1,0 +1,41 @@
+main{
+    display: flex;    
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+#caixas{
+    display: flex;
+    justify-content: space-around;
+}
+
+#caixa1{
+    border: solid 1px black;
+    
+    padding: 10px 10px;
+}
+
+#caixa1 p{
+    border: dotted 3px blue;
+}
+
+#caixa2{
+    border:double 5px green;
+    border-radius: 15px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 200px;
+    border-bottom-color: blue;
+    padding: 10px 10px;
+    width: 500px;
+
+}
+
+#caixa2 p{
+    border: dashed 2px red;
+    width: 440px;
+    border-bottom-right-radius: 200px;
+}
