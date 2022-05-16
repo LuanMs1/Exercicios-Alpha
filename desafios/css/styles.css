@@ -28,7 +28,7 @@ header{
     align-items: center;
     justify-content: space-between;
     height: 10vh;
-    width: 100vw;
+    width: 100%;
     
     border-bottom:groove 1px #D68F4Fff;
 }
@@ -41,6 +41,7 @@ header a:hover{
 }
 header img{
     border-radius: 50%;
+    margin-right: 10px;
 }
 header img:hover{
     background-color: grey;
@@ -67,13 +68,12 @@ header span{
     font-size:100%;
     max-width: 25vw;
     min-width: 20vw;
-    font-family: sans-serif;
+    font-family:sans-serif;
 }
 
 
 #maintext{
     font-size: 600%;
-    font-weight: 100;
     margin:0;
 }
 
@@ -114,10 +114,23 @@ header span{
     background-color: white;
     box-shadow:0px 2px 2px black;
 }
+.square:hover{
+    width: 8px;
+    height: 8px;
+}
 
 .square.selected{
     background-color: #D68F4Fff;
     box-shadow:0px 2px 2px rgba(214, 142, 79, 0.733);
     width: 10px;
     height: 10px;
+}
+
+
+
+#traço{
+    width: 20px;
+    height: 2px;
+    color:#D68F4Fff;
+    background-color: #D68F4Fff;
 }
