@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    
+    flex-wrap: wrap;
+}
+div{
+
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin:5px;
+}
+div p{
+    padding:5px;
+    margin-bottom:0;
+}
+#hexadecimal{
+    background-color: #000000;
+    color:#ffffff;
+}
+#hexadecimalct{
+    background-color: #ff000089;
+    color:#00ff00;
+}
+#rgb{
+    background-color: rgb(255,255,0);
+    color:rgb(0,0,255);
+}
+
+#rgbct{
+    background-color: rgba(255, 255, 0, 0.39);
+    color:rgb(0,0,255);
+}
+#hsl{
+    background-color: rgb(29, 178, 247);
+    color:rgb(143, 67, 26);
+}
+
+#hsla{
+    background-color: rgb(29, 178, 247,0.4);
+    color:rgb(143, 67, 26);
+}
+
+#cor{
+    background-color: brown;
+    color:pink;
+}

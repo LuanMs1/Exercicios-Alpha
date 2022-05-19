@@ -5,6 +5,10 @@ root{
 --persian-orange: #D68F4Fff;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 .org{
     color:#D68F4Fff;
 }
@@ -20,7 +24,7 @@ main{
 }
 
 main > *{
-    margin-top:10px;
+    /* margin-top:10px; */
 }
 
 header{
