@@ -1,0 +1,90 @@
+/* removing margin and padding from everithing */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/* organizing the page as a whole */
+body{
+
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+
+}
+h1{
+    text-align: center;
+    margin:40px;
+    margin-top: 20px;
+    background-color: tomato;
+    border-radius: 5px;
+    box-shadow: 0px 3px 3px black;
+}
+p{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    border:double 3px black;
+}
+
+/* a class to organize each exemple */
+.example{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+/* Style of the primary containers, each different one will show different effects of the flex-flow */
+.container{
+    
+    display: flex;
+    flex-flow: row nowrap;
+    height: 400px;
+    width: 400px;
+    border: solid 1px black;
+    border-radius: 15px;
+    margin-bottom:5px;
+
+}
+
+/* boxes that will represent each iten to have the effect of the flex-flow */
+.squares{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    margin: 20px;
+    color: white;
+    background-color: black;
+    
+}
+/* fixing p inside the boxes */
+.squares p{
+    margin:0;
+    padding:10px;
+    border:solid 1px white;
+    border-radius: 50%;
+
+}
+
+/* beneaht here I will atribute different classes to make different effects in different blocks */
+
+/* will have classes to combin row, row-reverse, column, column reverse with the wrap */
+.rwp{
+    flex-flow:row wrap;
+}
+
+.rrwp{
+    flex-flow:row-reverse wrap;
+}
+
+.cwp{
+    flex-flow: column wrap;
+}
+
+.crwp{
+    flex-flow: column-reverse wrap;
+}
+
