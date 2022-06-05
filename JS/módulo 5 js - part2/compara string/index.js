@@ -4,11 +4,11 @@ function addEvents(){
 
 function larger(){
     var numbers = document.getElementsByTagName('input');
-    var firstNumber = parseInt(numbers[0].value);
-    var secondNumber = parseInt(numbers[1].value);
-    if (firstNumber > secondNumber){
-        document.getElementById('answer').innerHTML = "O primeiro número é maior"
+    var firststring = numbers[0].value;
+    var secondstring = numbers[1].value;
+    if (firststring.length > secondstring.length){
+        document.getElementById('answer').innerHTML = "O primeiro string é maior"
     }else{
-        document.getElementById('answer').innerHTML = "O segundo número é maior"
+        document.getElementById('answer').innerHTML = "O segundo string é maior"
     }
 }

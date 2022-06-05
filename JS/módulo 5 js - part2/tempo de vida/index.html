@@ -11,14 +11,36 @@
 <body onload="addEvents()">
     <form action="">
         <h1>Comparando números</h1>
+
         <section>
-            <label for="numeros" class="question"> Digite dois numeros</label>
+            <label for="numeros" class="question"> Digite sua data de nascimento</label>
             <div class="flex-row">
-                <input type="number" class="number-field" name='first-number' tabindex="1"> e
-                <input type="number" name="second-number" class="number-field" tabindex="2">    
+                <input type="number" class="date-field" name='first-number' tabindex="1"> /
+                <input type="number" name="second-number" class="date-field" tabindex="2"> /
+                <input type="number" class="date-field" tabindex="3">   
             </div>
-            <button type="button" id="submit-button">Comparar</button>
         </section>
+
+        <section >
+            <label for="Gender" class="question"> Qual seu genero?</label>
+
+            <div class="rad">
+
+                <input type="radio" name="gender" class="genders" id="gender-male">
+                <label for="gender" name="masc">
+                    Homem
+                </label>
+            </div>
+
+            <div class="rad">
+                <input type="radio" name="gender" class="genders">
+                <label for="woman" name="woman">
+                    Mulher
+                </label>
+            </div>
+        </section>
+        
+        <button type="button" id="submit-button" onclick="predictDeath()">Comparar</button>
     </form>    
     <p id="answer"></p>
 </body>
