@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+form{
+    background-color: rgb(87, 87, 172);
+    border: solid 1px black;
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+    padding:20px;
+}
+section{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    height:20vh;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+label{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+button{
+    width: 100px;
+    align-self: center;
+}
+
+#answer{
+    font-size: 16px;
+    font-weight: bold;
+}

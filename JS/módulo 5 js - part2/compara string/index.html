@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Comparando numeros</title>
+</head>
+<script src="./index.js"></script>
+<body onload="addEvents()">
+    <form action="">
+        <h1>Comparando números</h1>
+        <section>
+            <label for="numeros" class="question"> Digite dois numeros</label>
+            <div class="flex-row">
+                <input type="number" class="number-field" name='first-number' tabindex="1"> e
+                <input type="number" name="second-number" class="number-field" tabindex="2">    
+            </div>
+            <button type="button" id="submit-button">Comparar</button>
+        </section>
+    </form>    
+    <p id="answer"></p>
+</body>
+</html>
