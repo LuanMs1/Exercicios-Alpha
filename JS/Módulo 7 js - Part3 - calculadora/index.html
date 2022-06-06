@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Calculadora</title>
+</head>
+
+<script src="./index.js"></script>
+<body onload="addEvents()">
+    <form action="" class="flex-column">
+        <h1>Calculadora</h1>
+        <div class="flex-row numbers">
+            <input type="number" name="first-number" placeholder="insira um número" tabindex="1" />
+            <input type="number" name="second-number" placeholder="insira um núnmero" tabindex="2" />
+        </div>
+        <div class="flex-row operation">
+            <select name="operations" id="operations">
+                <option value="soma">Soma</option>
+                <option value="multiplicação">Multiplicação</option>
+                <option value="divisão">Divisão</option>
+            </select>
+            <button type="button" id="submit">Calcular</button>
+        </div>
+        <div class="result">
+            <p id="answer"></p>
+        </div>
+    </form>
+        
+</body>
+</html>
