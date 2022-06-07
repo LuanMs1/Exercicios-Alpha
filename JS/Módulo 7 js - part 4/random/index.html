@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +7,20 @@
     <link rel="stylesheet" href="./index.css">
 
     <script src="./index.js"></script>
-    
-    <title>Document</title>
+
+    <title>Aleatório</title>
 </head>
-<body>
-    
+<body onload="addEvents()">
+    <form action="" class="flex-column">
+        <h1>Gerador de número aleatório</h1>
+        <div class="info flex-row">
+            <label for="number">Insira o menor e maior número : </label>
+            <input type="text" name="min" id="min" class="info-field" placeholder="Mínimo" />
+            <input type="text" name="max" id="max" class="info-field" placeholder="Máximo">
+        </div>
+        <button type="button" id="submit">Gerar</button>
+        <p id="answer"></p>
+        <p id="error"></p>
+    </form>        
 </body>
 </html>
