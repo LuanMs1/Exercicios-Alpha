@@ -22,10 +22,15 @@ function calculate(){
             break;
 
         case 2:
-            result = numberOne / numbertwo;
-            console.log(numberOne + " / " + numbertwo + " = " + result);
-            document.getElementById('answer').innerHTML = numberOne + " / " + numbertwo + " = " + result;
-            break;
+            if (numbertwo == 0){
+                alert('Não da pra dividir por zero');
+                break;
+            }else{
+                result = numberOne / numbertwo;
+                console.log(numberOne + " / " + numbertwo + " = " + result);
+                document.getElementById('answer').innerHTML = numberOne + " / " + numbertwo + " = " + result;
+            }
+            // break;
 
     }
 }
