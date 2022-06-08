@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +7,37 @@
     <link rel="stylesheet" href="./index.css">
 
     <script src="./index.js"></script>
-    
-    <title>Document</title>
+
+    <title>Ceil e floor</title>
 </head>
-<body>
-    
+<body onload="addEvents()">
+
+    <form action="" >
+        <h1>Arredondamento</h1>
+        <div class="info flex-row">
+            
+            <label for="number"> Digite um valor não inteiro: </label>
+            <input type="text" name="number" id="number" class="info-field" placeholder="Número" />
+
+        </div>
+
+
+        <div class="answers">
+            
+        <button type="button" id="submit">arredondar</button>
+
+            <div class="rouding flex-column">
+                <h3>Menor inteiro</h3>
+                <p id="floor"></p>
+            </div>
+            <div class="rouding flex-column">
+                <h3>Maior inteiro</h3>
+                <p id="ceil"></p>
+            </div>
+
+            <p id="error"></p>
+
+        </div>
+    </form>        
 </body>
 </html>
