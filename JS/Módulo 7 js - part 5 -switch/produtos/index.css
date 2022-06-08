@@ -16,19 +16,23 @@ form{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 30vw;
+    width: 40vw;
     height: fit-content;
-    background-color: rgb(43, 168, 43);
+    background-color: rgb(247, 176, 148);
     border: dashed 2px black;
     border-radius: 20px;
+    padding:10px;
 }
-
+.search{
+    padding:10px;
+}
 .product{
     display: none;
     justify-content: center;
     height: 200px;
     max-width: 200px;
     overflow: hidden;
+    padding:10px;
 }
 
 .product img{
