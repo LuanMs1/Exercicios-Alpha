@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <script src="index.js"></script>
+    <title>Document</title>
+</head>
+<body onload ='data(), addEvents()'>
+    
+    <main>
+        <p>Ajuste o cronômetro:</p>
+        <section>
+            <p>minutos:</p>
+            <select name="minutes" id="minutes">
+                <!-- tempo setado no js -->
+            </select>
+            <p>segundos:</p>
+            <select name="seconds" id="seconds">
+                <!-- tempo setado no js -->
+            </select>
+            <button type="submit" id = 'control'>Iniciar</button>
+        </section>
+        <section>
+            <div class="timer">
+                <span id="minNumber">00</span> : <span id="secNumber">00</span>
+            </div>
+        </section>
+    </main>
+    <audio src="../sounds/alarm.wav" id ='alarm'></audio>
+    <audio src="../sounds/tick.wav" id="tick"></audio>
+
+</body>
+</html>

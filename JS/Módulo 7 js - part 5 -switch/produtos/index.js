@@ -5,7 +5,7 @@ const products =[
     'colar',
     'pulseira',
     'relógio'
-]
+];
 
 function addEvents(){
     document.getElementById('submit').addEventListener('click',showProduct);
@@ -62,8 +62,7 @@ function showProduct(){
             
         case 'relógio':   
             showImage('./imgs/relógio.png');
-            break;
-        
+            break;       
         
     }
 
