@@ -12,13 +12,18 @@ function checkValid(a){ // essa função vai checar a validade do input e apagar
     const num = a.target.value;
     console.log('a.target.value = ' + a.target.value);
 
+    if(num.length > 11){
+        const snd =  document.getElementById('error-sound'); //som
+        console.log('ta grande');
+        a.target.value = num.slice(0, -1); //apagando o caractere digitado erroneamente
+        snd.play();
+        return 0;
+
+    }
     // tentando apagar o ' - ' quando necessário
     if(a.key == 'Backspace'){
         if(num.length == 7){
-            console.log('apaga mais');
-            console.log('before slice: ' + a.target.value)
-            a.target.value.slice(0,-3);
-            console.log('after slice: ' + a.target.value)
+            a.target.value = num.slice(0,-3);
             
         }
     }else{ //executa o código normal somente se a tecla n for backspace
@@ -32,7 +37,7 @@ function checkValid(a){ // essa função vai checar a validade do input e apagar
     
         }else{
             if(num.length == 5){//apos digitar o 5 elemento acrescentar ' - '
-                a.target.value += ' - '
+                a.target.value += ' - ';
             }
         }
 
