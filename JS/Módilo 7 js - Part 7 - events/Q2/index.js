@@ -2,7 +2,7 @@ const input = document.getElementById('cep');
 // add events
 
 function addEvents(){
-    document.getElementById('cep').addEventListener('keyup',checkValid); //Evento de digitar no input
+    document.getElementById('cep').addEventListener('keydown',checkValid); //Evento de digitar no input
 }
 
 
@@ -10,12 +10,12 @@ function addEvents(){
 
 function checkValid(a){ // essa função vai checar a validade do input e apagar o ' - ' inserido pelo js
     const num = a.target.value;
-    console.log('a.target.value = ' + a.target.value);
+    console.log(a);
 
-    if(num.length > 11){
+    if(num.length > 10){
         const snd =  document.getElementById('error-sound'); //som
         console.log('ta grande');
-        a.target.value = num.slice(0, -1); //apagando o caractere digitado erroneamente
+        a.preventDefault();
         snd.play();
         return 0;
 
@@ -27,11 +27,11 @@ function checkValid(a){ // essa função vai checar a validade do input e apagar
             
         }
     }else{ //executa o código normal somente se a tecla n for backspace
-        if(isNaN(parseInt(a.key))){ 
+        if(isNaN(parseInt(a.key))){
+            a.preventDefault(); 
             //se a tecla pressionada não for inteiro gera erro e apaga o q foi digitado
             const snd =  document.getElementById('error-sound'); //som
             const errorMsg = document.querySelector('.error');
-            a.target.value = num.slice(0, -1); //apagando o caractere digitado erroneamente
             snd.play();
             errorMsg.innerHTML = 'Apenas números são aceitos';
     

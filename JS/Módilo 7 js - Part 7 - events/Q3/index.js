@@ -8,6 +8,7 @@ function addEvents(){
 
 
 function submitMessage(){
+
     const msg = document.querySelector('.camp').value;
     const chat = document.querySelector('#msgs');
     const msgBaloon = document.createElement('p');
@@ -18,7 +19,7 @@ function submitMessage(){
 }
 
 function entSubmit(e){
-    if(e.key=='Enter'){
+    if(e.key == 'Enter'){
         submitMessage();
     }
 }
