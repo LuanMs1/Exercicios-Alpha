@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <script src="index.js"></script>
+    <title>Objetos - form</title>
+</head>
+<body onload="addEvents()">
+
+    <form action="">
+        <div class="field">
+            <label for="name" id = 'name-label'> Insira seu nome:</label>
+            <input type="text" name="name" id = 'name-input' placeholder="Fulano Fulanin da silva" />
+        </div>
+        <div class="field">
+            <label for="date" id="date-label"> Insira sua data de nascimento:</label>
+            <div class="date">
+                <input type="text" name="date" id="day" placeholder="Dia">
+                <input type="text" id="month" placeholder="Mês">
+                <input type="text" id="year" placeholder="Ano">
+            </div>
+        </div>
+        <div class="field">
+            <label for="weight-height" id="height-label">Digite seu peso (Kg) e altura (cm) :</label>
+            <input type="text" name="weight-height" id="weight" placeholder="Peso (kg)" />
+            <input type="text"  id="height" placeholder="Altura (cm)">
+        </div>
+        <div class="field">
+            <label for="Gender">Gênero:</label>
+            <select name="gender" id="gender-select">
+                <option value="man">Homem</option>
+                <option value="woman">Mulher</option>
+                <option value="other">Outro</option>
+            </select>
+        </div>
+        <button type="button" class="submit"> Enviar</button>
+        <p class="error"></p>
+        <p class="results"></p>
+        <p class="object"></p>
+               
+    </form>
+    
+</body>
+</html>

@@ -9,10 +9,17 @@
     --primary--collor: #233D4D;
     --secondary--collor: #9AC2C9;
 }
+
 body{
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    background-color: var(--background--collor);
+    /* font-family: 'Lato'; */
+    color:var(--primary--collor);
+    font-size: 22px;
+    font-weight: bold;
     height: 100vh;
 }
 
@@ -25,18 +32,6 @@ header{
     justify-content: center;
     background-color: var(--primary--collor);
     color: var(--secondary--collor);
-}
-
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--background--collor);
-    /* font-family: 'Lato'; */
-    color:var(--primary--collor);
-    font-size: 22px;
-    font-weight: bold;
 }
 
 h1{
@@ -59,30 +54,28 @@ main{
     width: 95vw;
 }
 
-.car-card{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 80vw;
-    height: 60vh;
-    border: solid 2px var(--primary--collor);
+.field{
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: var(--secondary--collor);
 }
 
-.img-wrap{
-    width: 30vw;
-    height: 50vh;
-    background-color: white;
-    overflow: hidden;
-    background-image: url('../imgs/background.png');
-    background-size: cover;
-    background-position: -50px;
+label{
+    width: 100%;
 }
 
-.img-wrap img{
-    height: 100%;
-
+input{
+    background-color:#a3babed7;
+    border-radius: 1px;
+}
+select{
+    background-color: #a3babed7;
 }
 
-.descriptions p{
-    padding:10px;
+.error{
+    font-size: 12pt;
+    font-weight: normal;
+    color: red;
 }
