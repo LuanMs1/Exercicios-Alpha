@@ -9,21 +9,36 @@
     <script src="index.js"></script>
     <title>Objetos - form</title>
 </head>
-<body>
+<body onload="addEvents()">
 
     <form action="">
         <div class="field">
-            <label for="name" id = 'name-label'> Insira seu nome.</label>
-            <input type="text" name="name" id = 'name-input' />
+            <label for="name" id = 'name-label'> Insira seu nome:</label>
+            <input type="text" name="name" id = 'name-input' placeholder="Fulano Fulanin da silva" />
         </div>
         <div class="field">
-            <label for="date" id="date-label"> Insira sua data de nascimento</label>
+            <label for="date" id="date-label"> Insira sua data de nascimento:</label>
             <div class="date">
-                <input type="text" name="date" id="day">
-                <input type="text" id="month">
-                <input type="text" id="year">
+                <input type="text" name="date" id="day" placeholder="Dia">
+                <input type="text" id="month" placeholder="Mês">
+                <input type="text" id="year" placeholder="Ano">
             </div>
-        </div>       
+        </div>
+        <div class="field">
+            <label for="weight-height" id="height-label">Digite seu peso (Kg) e altura (cm) :</label>
+            <input type="text" name="weight-height" id="weight" placeholder="Peso (kg)" />
+            <input type="text"  id="height" placeholder="Altura (cm)">
+        </div>
+        <div class="field">
+            <label for="Gender">Gênero:</label>
+            <select name="gender" id="gender-select">
+                <option value="man">Homem</option>
+                <option value="woman">Mulher</option>
+                <option value="other">Outro</option>
+            </select>
+        </div>
+        <button type="button" class="submit"> Enviar</button>
+               
     </form>
     
 </body>
