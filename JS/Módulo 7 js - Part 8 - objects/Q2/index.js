@@ -11,6 +11,7 @@ let user = {
 
 function addEvents(){
     document.querySelector('.submit').addEventListener('click',function (event){
+        document.querySelector('.error').innerHTML = '';
         // getting the elements
         const userName = document.querySelector('#name-input');
         const userBirth = [
@@ -22,15 +23,15 @@ function addEvents(){
         const userHeight = document.querySelector('#height');
         const userGenderSelector = document.querySelector('#gender-select'); //seletor 
         const userGender = userGenderSelector.options[userGenderSelector.selectedIndex].innerHTML; //retorna o nome dentro da tag selecionada
-        console.log(userBirth[1].length)
+        console.log(parseInt(userBirth[1]))
         try{
             // verificando por erros
             if (userName.value.length == 0) throw 'Field "name" is invalid';
 
             // validando datas
-            if (userBirth[2].length == 0) throw 'field "birthDate" is invalid';
+            if (userBirth[2].length == 0 || parseInt(userBirth[2]) > 31) throw 'field "birthDate" is invalid';
             if (isNaN(userBirth[2])) throw 'field "birthDate" is invalid';
-            if (userBirth[1].length == 0) throw 'field "birthDate" is invalid';
+            if (userBirth[1].length == 0 || parseInt(userBirth[1]) > 12) throw 'field "birthDate" is invalid';
             if (isNaN(userBirth[1])) throw 'field "birthDate" is invalid';
             if (userBirth[0].length == 0) throw 'field "birthDate" is invalid';
             if (isNaN(userBirth[0])) throw 'field "birthDate" is invalid';
@@ -43,9 +44,6 @@ function addEvents(){
             if (isNaN(userHeight.value)) throw 'field "Height" is invalid';
             if (isNaN(userWeight.value.replace(',','.'))) throw 'field "weight" is invalid';
 
-        }catch (err){
-            document.querySelector('.error').innerHTML = err;
-        }finally{
             // atribuindo propriedades do array  
             user.name = userName.value;
             user.birthDate = new Date(userBirth[0],userBirth[1] - 1, userBirth[2]);
@@ -54,13 +52,8 @@ function addEvents(){
             user.gender = userGender;
             console.log(user);
 
-            // resetando campos
-            userName.value = ''
-            document.querySelector('#year').value = '';
-            document.querySelector('#month').value = '';
-            document.querySelector('#day').value = '';
-            userHeight.value = '';
-            userWeight.value = '';
+        }catch (err){
+            document.querySelector('.error').innerHTML = err;
         }
         // // Checking for errors
         // console.log(userGender);
