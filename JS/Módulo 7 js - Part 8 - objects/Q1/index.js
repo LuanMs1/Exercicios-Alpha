@@ -7,6 +7,16 @@ let user = {
     gender: ''
 };
 
+//make selections
+
+function makeOptions(){
+    const daySelection = document.querySelector('#day');
+    const monthSelection = document.querySelector('#month');
+    const yearSelection = document.querySelector('#year');
+    const opt = document.createElement('option');
+    
+}
+
 //add events
 
 function addEvents(){

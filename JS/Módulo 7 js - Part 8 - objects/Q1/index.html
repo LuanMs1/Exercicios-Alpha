@@ -9,7 +9,7 @@
     <script src="index.js"></script>
     <title>Objetos - form</title>
 </head>
-<body onload="addEvents()">
+<body onload="addEvents(),makeOptions()">
 
     <form action="">
         <div class="field">
@@ -19,9 +19,21 @@
         <div class="field">
             <label for="date" id="date-label"> Insira sua data de nascimento:</label>
             <div class="date">
-                <input type="text" name="date" id="day" placeholder="Dia">
+                <select name="date" id="day">
+                    <!-- make options in js -->
+                </select>
+
+                <select id="month">
+                    <!-- make options in js -->
+                </select>
+
+                <select id="year">
+                    <!-- make options in js -->
+                </select>
+
+                <!-- <input type="text" name="date" id="day" placeholder="Dia">
                 <input type="text" id="month" placeholder="Mês">
-                <input type="text" id="year" placeholder="Ano">
+                <input type="text" id="year" placeholder="Ano"> -->
             </div>
         </div>
         <div class="field">
