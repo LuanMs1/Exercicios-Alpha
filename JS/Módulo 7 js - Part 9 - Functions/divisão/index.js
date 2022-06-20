@@ -87,7 +87,7 @@ function sum(num1, num2){
     errorField.innerHTML = '';
 
     try{
-        if(num1 == '' || num2 == '' ) throw 'digite dois números'
+        if(num1 === '' || num2 === '' ) throw 'digite dois números'
         if(num1 < 0 || num2 < 0 ) throw `[sum] impossible to sum ${num1} 
         + ${num2}`;
         return parseInt(num1) + parseInt(num2);
@@ -99,13 +99,8 @@ function sum(num1, num2){
 function subtraction(num1,num2,base){
     //Esse primeiro if é um acochambrado, por algum motivo sum(num2,base) retorna undefined no caso
     //em que num1 e num2 são iguais pois sum(num2,0) ta dando undefined, por alguma razão.
-    if(num1 === num2){
-        return 0;
-    }
-    
-    if(sum(num2,base) == num1){
-        return base;
-    }
+    if(num1 === num2) return 0;    
+    if(sum(num2,base) == num1) return base;
     // condition to stop in case of error
     // if(base > 20){
     //     return;
@@ -115,16 +110,12 @@ function subtraction(num1,num2,base){
 }
 
 function multiplication(num1,num2){
-    if(num1 == 0 || num2 == 0){
-        return '0';
-    }
+    if(num1 == 0 || num2 == 0) return 0;
     return sum(num1,multiplication(num1,num2-1));
-}
+} 
 
 function potenciation(num1,num2){
-    if(num2 == 0){
-        return 1;
-    }
+    if(num2 == 0) return 1;
     return multiplication(num1,potenciation(num1,num2 - 1));
 
 }
