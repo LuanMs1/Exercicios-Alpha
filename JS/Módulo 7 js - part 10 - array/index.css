@@ -1,0 +1,74 @@
+
+section{
+    display: flex;
+    align-items: flex-start;
+}
+.product-info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 65vw;
+    gap:20px;
+    padding:20px;
+}
+.primary-info{
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    width: 80%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.description{
+    width: 100%;
+}
+.product{
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+}
+
+table{
+    display: none;
+    width: 400px;
+}
+table, th,td,tr{
+    border: solid 1px black;
+}
+
+td{
+    text-align: center;
+}
+
+.name:hover, .edit:hover, .delete:hover{
+    cursor:pointer;
+    background-color:#d7e6db ;
+}
+.name:active, .edit:active, .delete:active{
+    background-color: #B9D8C2;
+}
+
+.show-product{
+    display: none;
+    padding: 10px;
+    border: solid 1px black;
+}
+
+.edit-product{
+    display: none;
+}
+.edit-wrapper{
+    display: flex;
+    gap:5px;
+    padding:5px;
+}
+
+.edit-wrapper input{
+    width: 100px;
+}
+
+.edit-info p{
+    width: 80px;
+}
