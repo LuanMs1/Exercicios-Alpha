@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --background--collor: #B9D8C2;
+    --primary--collor: #233D4D;
+    --secondary--collor: #9AC2C9;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background--collor);
+    /* font-family: 'Lato'; */
+    color:var(--primary--collor);
+    font-size: 14px;
+    height: 100vh;
+}
+
+header{
+    height: 22vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary--collor);
+    color: var(--secondary--collor);
+}
+
+h1{
+    font-size: 40px;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: normal;
+    font-style: italic;
+    text-shadow: 0 0 5px black;
+}
+
+h2{
+    font-family: 'roboto';
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-right: solid 1px black;
+    height: 100%;
+    padding:10px;
+}
+
+main{
+    display: flex;
+    /* justify-content: space-evenly; */
+    height: 75vh;
+    width: 100vw;
+}
+
+.input{
+    display: flex;
+    padding:10px;
+    padding-left:0;
+}
+button{
+    padding:5px;
+    background-color: var(--primary--collor);
+    color:var(--secondary--collor);
+}
+
+button:active{
+    background-color: var(--secondary--collor);
+    color:var(--primary--collor)
+}
+.field{
+    padding: 5px;
+    margin: 5px;
+    border: solid 1px black;
+    border-radius: 10px;
+    background-color: var(--secondary--collor);
+    font-size:22px;
+    font-weight: bold;
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+label{
+    width: 100%;
+}
+
+input{
+    background-color:#a3babed7;
+    border-radius: 1px;
+    width: fit-content;
+    min-width: 150px;
+}
+textarea{
+    background-color:#a3babed7;
+    border-radius: 1px;
+    width: inherit;
+    min-width: 150px;
+    min-height: 100px;
+    height: fit-content;
+
+}
+select{
+    background-color: #a3babed7;
+}
+
+.error{
+    font-size: 12pt;
+    font-weight: normal;
+    color: red;
+}
+
+.operations{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.operations button{
+    font-size: 20px;
+    width: 40px;
+}
+
