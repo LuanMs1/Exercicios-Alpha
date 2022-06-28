@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+main{
+    display: flex;
+    flex-flow:wrap column;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+    gap: 10px;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.deck{
+    height: 250px;
+    width: 200px;
+    background-color: black;
+}
+
+.deck img{
+    height: 100%;
+}
+.hand{
+    display: flex;
+    justify-content:space-evenly;
+    width: 80vw;
+}
+.card{
+    height: 250px;
+    width: 200px;
+    background-color: red;
+}
