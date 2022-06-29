@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+body{
+    height: 100vh;
+    background: rgb(14,60,11);
+    background: radial-gradient(circle, rgba(14,60,11,1) 0%, rgba(39,103,33,1) 48%, rgba(54,129,49,1) 100%);
+    
+}
+
 main{
     display: flex;
     flex-flow:wrap column;
@@ -13,6 +20,19 @@ main{
     gap: 10px;
 
     font-family: 'Roboto', sans-serif;
+}
+.logo{
+    position: absolute;
+    top:60px;
+    left:20px;
+    font-size: 60px;
+    transform: rotate(-40deg);
+}
+
+.poker{
+    font-family: 'Rubik Moonrocks', cursive;
+    text-shadow: 0 0 5px black;
+    color:rgb(233, 14, 14);
 }
 
 .deck{

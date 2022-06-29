@@ -32,19 +32,6 @@ function rand(a,b){
 
 function shuffle(arr){
     let shuffledArr = [];
-    // for (let i = 0; i < arr.length; i++){
-    //     let k = rand(0, arr.length - 1);
-    //     console.log(k);
-    //     console.log(arr[k])
-    //     while (shuffledArr.includes(arr[k])){
-    //         k++;
-    //         if (k > arr.length - 1){
-    //             k = 0;
-    //         }
-    //     }
-
-    //     shuffledArr.push(arr[k]);
-    // }
     for (let i = 0; i < arr.length; i++){
         let k = rand(0, arr.length - 1 - i);
         shuffledArr.push(arr[k]);
@@ -161,7 +148,6 @@ function valueMatch(hand){
             quadCount++;
         }
     }
-    console.table(pairs);
 
     if (quadCount == 1){
         handMade['quadra'] = true;
@@ -181,7 +167,7 @@ function valueMatch(hand){
             return 'pair';
         }
         handMade['dois Pares'] = true;
-        return 'two pairs'
+        return 'two pairs';
     }
 
     return;

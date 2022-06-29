@@ -1,0 +1,25 @@
+.line{
+    display: flex;
+    border-bottom: 1px solid black;
+    width: 240px;
+}
+.line:nth-child(3){
+    border: none;
+}
+.elemento:first-child{
+    border-right: 1px solid black;
+}
+.elemento:nth-child(2){
+    border-right: 1px solid black;
+}
+.elemento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100px;
+    width: 80px;
+
+    font-size: 20px;
+    /* background-color: black; */
+}
