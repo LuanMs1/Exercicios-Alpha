@@ -1,3 +1,16 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.game{
+    border: 3px solid black;
+    box-shadow: 0 0 10px black;
+    padding:10px;
+    margin:5px;
+}
 .line{
     display: flex;
     border-bottom: 1px solid black;

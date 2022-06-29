@@ -24,9 +24,25 @@ function addEvents(){
             changePlayer();
             updateMatrix();
             winnerPlayer  = checkWinner();
-            console.log(winnerPlayer)
+            if (winnerPlayer){
+                document.querySelector('.winner').innerText = `${winnerPlayer} venceu`;
+            }
         });
     })
+    document.querySelector('.reset').addEventListener('click',resetGame);
+}
+
+function resetGame(){
+    const placesArr = Array.from(places);
+    player = '';
+    placesArr.forEach(function (element){
+        markPlay(element);
+    })
+    updateMatrix(); 
+    player = 'X';
+    winner = false;
+    document.querySelector('.winner').innerText = '';
+
 }
 
 function markPlay(element){
@@ -55,14 +71,14 @@ function updateMatrix(){
 function checkWinner(){
     for (let i = 0; i < 3; i++){
         if (
-            (gameMatrix[i][0] == gameMatrix[i][1] && gameMatrix[i][0] == gameMatrix[i][2]) &&
-            (gameMatrix[i][0] != undefined && gameMatrix[i][1] != undefined && gameMatrix[i][2] != undefined)
+            (gameMatrix[i][0] == gameMatrix[i][1] && gameMatrix[i][0] == gameMatrix[i][2]) && 
+            (gameMatrix[i][0] == 'X' || gameMatrix[i][0] == 'O')
             ){
             winner = true;
             return gameMatrix[i][0];
         }         
         if ((gameMatrix[0][i] == gameMatrix[1][i] && gameMatrix[1][i] == gameMatrix[2][i]) &&
-            (gameMatrix[0][i] != undefined && gameMatrix[1][i] != undefined && gameMatrix[2][i] != undefined)
+            (gameMatrix[0][i] == 'X' || gameMatrix[0][i] == 'O')
             ){
             winner = true;
             return gameMatrix[0][i];
@@ -71,8 +87,7 @@ function checkWinner(){
     for (let i = 0; i < 2; i++){
         if (
             (gameMatrix[0][i*2] == gameMatrix[1][1] && gameMatrix[1][1] == gameMatrix[2][2 + (-1 * i)*2]) &&
-            (gameMatrix[0][i*2] != undefined && gameMatrix[1][1] != undefined && gameMatrix[2][(-1 * i)*2] != undefined)
-            
+            (gameMatrix[0][i*2] == 'X' || gameMatrix[0][i*2])            
             ){
             winner = true;
             return gameMatrix[1][1];
