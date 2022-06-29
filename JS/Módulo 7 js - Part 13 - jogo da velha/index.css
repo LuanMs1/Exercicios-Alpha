@@ -5,6 +5,20 @@ body{
     align-items: center;
     height: 100vh;
 }
+.game-table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(180, 180, 180)
+}
+.player{
+    position: absolute;
+    top: 40vh;
+    left:10vw;
+    transform: rotate(-45deg);
+    font-size:4vw
+}
+
 .game{
     border: 3px solid black;
     box-shadow: 0 0 10px black;
