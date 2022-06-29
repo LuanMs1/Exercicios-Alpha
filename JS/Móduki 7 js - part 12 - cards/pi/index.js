@@ -13,7 +13,7 @@ function factorialCalculate(n){
 function factorial(n){
     n = BigInt(n);
     if (n in memo){
-        return memo[n]
+        return memo[n];
     }
     memo[n] = factorialCalculate(n);
     return memo[n];

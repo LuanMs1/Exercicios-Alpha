@@ -1,4 +1,4 @@
-let handMade = {
+const handMade = {
     'straight Flush' : false,
     'quadra' : false,
     'full House' : false,
@@ -8,11 +8,11 @@ let handMade = {
     'par' : false,
     'flush': false
 }
-let deck = [
-    '2P', '3P', '4P', '5P', '6P', '7P', '8P', '9P', '0P', 'JP', 'QP', 'KP', 'AP',
-    '2O', '3O', '4O', '5O', '6O', '7O', '8O', '9O', '0O', 'JO', 'QO', 'KO', 'AO',
+const deck = [
+    '2S', '3S', '4S', '5S', '6S', '7S', '8S', '9S', '0S', 'JS', 'QS', 'KS', 'AS',
+    '2D', '3D', '4D', '5D', '6D', '7D', '8D', '9D', '0D', 'JD', 'QD', 'KD', 'AD',
+    '2H', '3H', '4H', '5H', '6H', '7H', '8H', '9H', '0H', 'JH', 'QH', 'KH', 'AH',
     '2C', '3C', '4C', '5C', '6C', '7C', '8C', '9C', '0C', 'JC', 'QC', 'KC', 'AC',
-    '2E', '3E', '4E', '5E', '6E', '7E', '8E', '9E', '0E', 'JE', 'QE', 'KE', 'AE',
 ];
 
 //test arrays
@@ -27,24 +27,30 @@ let deck = [
 //////////
 
 function rand(a,b){
-    return Math.floor(Math.random() * (b - a)) + a;
+    return Math.floor(Math.random() * (b - a + 1)) + a;
 }
 
 function shuffle(arr){
     let shuffledArr = [];
-    
-    for (let i = 0; i < arr.length - 1; i++){
-        let k = Math.floor(rand(0, arr.length - 1));
-        while (shuffledArr.includes(arr[k])){
-            k++;
-            if (k > arr.length - 1){
-                k = 0;
-            }
-        }
+    // for (let i = 0; i < arr.length; i++){
+    //     let k = rand(0, arr.length - 1);
+    //     console.log(k);
+    //     console.log(arr[k])
+    //     while (shuffledArr.includes(arr[k])){
+    //         k++;
+    //         if (k > arr.length - 1){
+    //             k = 0;
+    //         }
+    //     }
 
+    //     shuffledArr.push(arr[k]);
+    // }
+    for (let i = 0; i < arr.length; i++){
+        let k = rand(0, arr.length - 1 - i);
         shuffledArr.push(arr[k]);
+        deck.push(deck.splice(k,1)[0]);
     }
-    // console.log(shuffledArr)
+    console.log(deck)
     return shuffledArr;
 }
 
@@ -53,6 +59,10 @@ function resetResult(){
         handMade[res] = false;
     }
     return 0;
+}
+
+function getCard(deck){
+    return deck.pop();
 }
 
 function dealHand(deck){
@@ -128,6 +138,7 @@ function checkSequence(hand){
 }
 
 function valueMatch(hand){
+    console.log(hand)
     hand = extractValues(hand)
     let pairs = {};
     let pairCount = 0;
@@ -150,6 +161,7 @@ function valueMatch(hand){
             quadCount++;
         }
     }
+    console.table(pairs);
 
     if (quadCount == 1){
         handMade['quadra'] = true;
