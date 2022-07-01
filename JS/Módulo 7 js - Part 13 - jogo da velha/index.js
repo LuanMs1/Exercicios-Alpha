@@ -29,16 +29,28 @@ function addEvents(){
             if (winnerPlayer){
                 document.querySelector('.winner').innerText = `${winnerPlayer} venceu`;
             }
+            checkTie();
         });
     })
     document.querySelector('.reset').addEventListener('click',resetGame);
+}
+
+function checkTie(){
+    for (let i = 0; i < 3; i++){
+        for (let j = 0; j < 3; j++){
+            if(gameMatrix[i][j] == '' || gameMatrix[i][j] == undefined){
+                return;
+            }
+        }
+    }
+    winner = 'Empate';
+    document.querySelector('.winner').innerText = winner;
 }
 
 function resetGame(){
     const placesArr = Array.from(places);
     player = '';
     placesArr.forEach(function (element){
-        element.dataset.marked = '';
         markPlay(element);
     })
     updateMatrix(); 
@@ -95,7 +107,7 @@ function checkWinner(){
     for (let i = 0; i < 2; i++){
         if (
             (gameMatrix[0][i*2] == gameMatrix[1][1] && gameMatrix[1][1] == gameMatrix[2][2 + (-1 * i)*2]) &&
-            (gameMatrix[0][i*2] == 'X' || gameMatrix[0][i*2])            
+            (gameMatrix[0][i*2] == 'X' || gameMatrix[0][i*2] == 'O')            
             ){
             winner = true;
             highlight('diagonal',i);
