@@ -2,8 +2,10 @@ export default () => {
     const container = document.createElement('div');
     container.className = 'section-cards';
     const template = `
+
+    <h1> Doceria </h1>
         
-    <div class="product-card">
+    <div class="section-card">
 
     <div class="product-section">
         <img src="./pictures/brigadeiro-section.jpg" alt="Brigadeiros">
@@ -11,7 +13,8 @@ export default () => {
     <p>Brigadeiros</p>
 
     </div>
-    <div class="product-card">
+
+    <div class="section-card">
 
         <div class="product-section">
             <img src="./pictures/cupcakes-section.jpg" alt="Cupcakes">
@@ -19,7 +22,8 @@ export default () => {
         <p>Cupcakes</p>
 
     </div>
-    <div class="product-card">
+
+    <div class="section-card">
 
         <div class="product-section">
             <img src="./pictures/doces.jpg" alt="doces">
