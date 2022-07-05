@@ -1,7 +1,6 @@
 export default () => {
-    const container = document.createElement('div');
-    // container.className = 'section-cards';
-    const template = `
+    let main = document.querySelector('#root');
+    const content = `
    
     <h1>Cupcakes</h1>
 
@@ -44,7 +43,6 @@ export default () => {
 
 
     `;
-    container.innerHTML = template;
-
-    return container;
+    console.log('page3 render')
+    return main.innerHTML = content;
 }

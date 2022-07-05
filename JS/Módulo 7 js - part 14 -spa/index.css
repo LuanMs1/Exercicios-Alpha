@@ -23,6 +23,11 @@ a{
     color: white;
 }
 header{
+    display: flex;
+    justify-content: space-evenly;
+    padding:10px;
+    font-size: 20px;
+    width: 100%;
     border-bottom: 1px solid rgb(182, 182, 182);
 }
 
@@ -38,6 +43,12 @@ ul{
     list-style: none;
     width: 80vw;
     padding:10px;
+}
+
+.sections{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 

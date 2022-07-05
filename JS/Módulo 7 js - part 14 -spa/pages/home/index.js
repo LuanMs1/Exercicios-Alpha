@@ -1,10 +1,9 @@
 export default () => {
-    const container = document.createElement('div');
-    container.className = 'section-cards';
-    const template = `
+    let main = document.querySelector('#root');
+    const content = `
 
     <h1> Doceria </h1>
-        
+    <div class = 'sections'>    
     <div class="section-card">
 
     <div class="product-section">
@@ -31,9 +30,9 @@ export default () => {
         <p>Doces</p>
 
     </div>
+    </div>
 
     `;
-    container.innerHTML = template;
-
-    return container;
+    console.log(main);
+    return main.innerHTML = content;
 }
