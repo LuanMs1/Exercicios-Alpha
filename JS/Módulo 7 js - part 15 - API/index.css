@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:10px;
+    border: 1px solid black;
+    height: 20vh;
+    width: 60vw;
+    max-width: 600px;
+    gap:20px;
+
+}
+
+select{
+    width: fit-content;
+}
+
+.dates{
+    display: flex;
+    justify-content:flex-start;
+    gap: 30px;
+}
+table{
+    border: 1px solid black;
+    width: 60vw;
+}
+th, td, tr{
+    border: 1px solid black;
+    padding: 5px;
+}

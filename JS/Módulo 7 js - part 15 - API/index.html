@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="index.css">
+
+    <title>Moedas</title>
+</head>
+<body>
+
+    <h1>Cotação de moedas</h1>
+    <form action="">
+        <div class="selection">
+
+            <select name="moedas" id="coins">
+                <!-- <option value="escolha">Selecione a moeda</option> -->
+                <option value="USD-BRL">USD-BRL</option>
+                <!-- <option value="usd">USD</option> -->
+            </select>
+
+        </div>
+
+        <div class="dates">
+            <div>
+                <label for="start-date">Data inicial:</label>
+                <input type="date" name="start-date" id = 'start-date' >
+            </div>
+            <div>
+                <label for="end-date">Data final:</label>
+                <input type="date" name="end-date" id= 'end-date'>                
+            </div>
+        
+
+        </div>
+
+        <button type="button" id="search">Buscar</button>
+    
+
+    </form>
+
+    <div class="table-place">
+
+    </div>
+    
+    <script src="index.js" type="module"></script>
+    
+</body>
+</html>
