@@ -1,6 +1,7 @@
 import checkValid from "./cep.js";
 import getCepInfo from "./getCepInfo.js";
 let cep = '';
+let cordinates = {lat: 0,lng:0};
 const infoPlace = document.querySelector('.infos');
 window.addEventListener('load', addEvents);
 function addEvents(){
@@ -9,9 +10,12 @@ function addEvents(){
     });
     document.querySelector('.search').addEventListener('click',(event) => {
         let dataPromise = getCepInfo(cep);
+        console.log(cep);
         dataPromise.then(data => printInfo(data));
     })
 }
+
+
 
 function printInfo(data){
     console.log(data);
@@ -34,5 +38,16 @@ function printInfo(data){
     infoLg.innerHTML = `Longitude: ${data['lng']}`;
     infoPlace.appendChild(infoLt);
     infoPlace.appendChild(infoLg);
+
+    cordinates.lat = data['lat'];
+    cordinates.lng = data['lng'];
+    const bt = document.createElement('button');
+    bt.addEventListener('click',showMap);
+    bt.innerHTML = 'Mostrar Mapa'
+    infoPlace.appendChild(bt);
+
+}
+function showMap(){
+    document.querySelector('#map').src = `http://maps.google.com/maps?q=${cordinates.lat},${cordinates.lng}&z=15&output=embed`;
 }
 

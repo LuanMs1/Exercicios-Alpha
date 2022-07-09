@@ -12,7 +12,7 @@ export default function checkValid(a,cep){ // essa função vai checar a validad
         const snd =  document.getElementById('error-sound'); //som
         a.preventDefault();
         snd.play();
-        return;
+        return cep;
 
     }
     // tentando apagar o ' - ' quando necessário

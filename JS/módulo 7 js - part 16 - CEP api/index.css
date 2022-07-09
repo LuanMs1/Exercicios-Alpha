@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+main{
+    display: flex;
+    padding:10px;
+}
+.primary{
+    display: flex;
+    flex-flow: column nowrap;
+    gap:20px;
+    padding:5px;
+    background-color: rgba(128, 128, 128, 0.274);
+
+    border:solid 1px black
+}
+.map{
+    background-color: rgba(128, 128, 128, 0.274);
+    border: solid 1px black
+}
+iframe{
+    width: 50vw;
+    height: 40vh;
+    /* padding:10px; */
+}
