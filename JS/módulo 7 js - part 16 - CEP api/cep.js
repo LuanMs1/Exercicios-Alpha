@@ -1,39 +1,31 @@
-const input = document.getElementById('cep');
-// add events
-
-function addEvents(){
-    document.querySelector('.cep').addEventListener('keydown',checkValid); //Evento de digitar no input
-}
-
-
-//Functions of run
-
-function checkValid(a){ // essa função vai checar a validade do input e apagar o ' - ' inserido pelo js
+/**
+ * Formating for the CEP. add " - " and prevent invalid characters as well as 
+ * bigger numbers for a CEP.
+ * 
+ * @param {event} a a event 
+ * @param {number} cep the cep to be changed and returned
+ * @returns a string with a updated cep.
+ */
+export default function checkValid(a,cep){ // essa função vai checar a validade do input e apagar o ' - ' inserido pelo js
     const num = a.target.value;
-    console.log(a);
-
-    if(num.length > 10){
+    if(num.length > 10 && a.key !== 'Backspace'){
         const snd =  document.getElementById('error-sound'); //som
-        console.log('ta grande');
         a.preventDefault();
         snd.play();
-        return 0;
+        return;
 
     }
     // tentando apagar o ' - ' quando necessário
     if(a.key == 'Backspace'){
-        if(num.length == 7){
-            a.target.value = num.slice(0,-3);
-            
+        if(num.length == 8){
+            a.target.value = num.slice(0,-3);            
         }
     }else{ //executa o código normal somente se a tecla n for backspace
         if(isNaN(parseInt(a.key))){
             a.preventDefault(); 
             //se a tecla pressionada não for inteiro gera erro e apaga o q foi digitado
             const snd =  document.getElementById('error-sound'); //som
-            const errorMsg = document.querySelector('.error');
             snd.play();
-            errorMsg.innerHTML = 'Apenas números são aceitos';
     
         }else{
             if(num.length == 5){//apos digitar o 5 elemento acrescentar ' - '
@@ -42,4 +34,10 @@ function checkValid(a){ // essa função vai checar a validade do input e apagar
         }
 
     }
+    if (!isNaN(parseInt(a.key))){
+        cep+=a.key;
+    }else if(a.key == 'Backspace'){
+        cep = cep.slice(0,-1);
+    }
+    return cep;
 }
