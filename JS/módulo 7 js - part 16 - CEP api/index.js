@@ -11,7 +11,13 @@ function addEvents(){
     document.querySelector('.search').addEventListener('click',(event) => {
         let dataPromise = getCepInfo(cep);
         console.log(cep);
-        dataPromise.then(data => printInfo(data));
+        dataPromise.then(data => {
+            document.body.style.cursor = 'default';
+            printInfo(data);
+        });
+    })
+    document.querySelector('iframe').addEventListener('load',() => {
+        document.body.style.cursor = 'default';
     })
 }
 
@@ -48,6 +54,7 @@ function printInfo(data){
 
 }
 function showMap(){
+    document.body.style.cursor = 'wait';
     document.querySelector('#map').src = `http://maps.google.com/maps?q=${cordinates.lat},${cordinates.lng}&z=15&output=embed`;
 }
 

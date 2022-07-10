@@ -4,7 +4,7 @@
  * @returns a promise of cep info
  */
 export default function getCepInfo(cep){
-    
+    document.body.style.cursor = 'wait';    
     let cepRequest = fetch(`https://cep.awesomeapi.com.br/json/${cep}`);
 
     let data = cepRequest.then(response => {
