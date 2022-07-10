@@ -2,6 +2,7 @@ import checkValid from "./cep.js";
 import getCepInfo from "./getCepInfo.js";
 let cep = '';
 let cordinates = {lat: 0,lng:0};
+let waiting = false;
 const infoPlace = document.querySelector('.infos');
 window.addEventListener('load', addEvents);
 function addEvents(){
@@ -9,15 +10,21 @@ function addEvents(){
         cep = checkValid(event,cep);
     });
     document.querySelector('.search').addEventListener('click',(event) => {
+        if(waiting){
+            return;
+        }
+        waiting = true;
         let dataPromise = getCepInfo(cep);
         console.log(cep);
         dataPromise.then(data => {
             document.body.style.cursor = 'default';
+            waiting = false;
             printInfo(data);
         });
     })
     document.querySelector('iframe').addEventListener('load',() => {
         document.body.style.cursor = 'default';
+        waiting = false;
     })
 }
 
@@ -54,7 +61,11 @@ function printInfo(data){
 
 }
 function showMap(){
+    if(waiting){
+        return;
+    }
     document.body.style.cursor = 'wait';
+    waiting = true;
     document.querySelector('#map').src = `http://maps.google.com/maps?q=${cordinates.lat},${cordinates.lng}&z=15&output=embed`;
 }
 
