@@ -10,9 +10,7 @@ function addEvents(){
         cep = checkValid(event,cep);
     });
     document.querySelector('.search').addEventListener('click',(event) => {
-        if(waiting){
-            return;
-        }
+        if (waiting) return;
         waiting = true;
         let dataPromise = getCepInfo(cep);
         console.log(cep);

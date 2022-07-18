@@ -56,7 +56,6 @@ function createBody(data){
                 if (i === days - 1){
                     console.log(filterData);
                     createTable(filterData,tablePlace);
-                    
                 }
             });
     }
