@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html leng = 'pt-br'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <script src="./index.js" type = 'module'></script>
+
+    <title>Previsão do tempo</title>
+
+</head>
+
+<body>
+    <label for="state">Escolha o estado:</label>
+    <select name="state" id="state">
+        <option value="init">Selecione um estado</option>
+    </select>
+    <label for="city">Escolha a cidade:</label>
+    <select name="city" id="city" disabled>
+        <option value="init">Selecione uma cidade</option>
+    </select>
+    <div class="prediction"></div>
+</body>
+
+</html>
