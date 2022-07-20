@@ -6,10 +6,11 @@ export default function getPrediction(city){
     const predictPlace = document.querySelector('.prediction');
     predictPlace.innerHTML = '';
     predictPlace.appendChild(table);
-    let p = fetch(`https://apiprevmet3.inmet.gov.br/previsao/${city}`);
-    let info = p.then(response => response.json());
+    let info = getData(city);
+    console.log(info);
     info.then(data => {
-        console.log(data);
+        console.log(info);
+        // console.log(data);
         let chaves = Object.keys(data[city]);
         for(let i = 0; i < 4; i++){
             if (i>1){
@@ -20,8 +21,6 @@ export default function getPrediction(city){
                 createLine(data[city][chaves[i]]['noite'],chaves[i],'noite',table);
             }
         }
-        document.querySelector('#state').disabled = false;
-        document.querySelector('#city').disabled = false;
     });
 }
 function createTableHeader(table){
@@ -45,4 +44,27 @@ function createLine(data, day, period, table){
     newRow.insertCell(4).innerHTML = data['resumo'];
     newRow.insertCell(5).innerHTML = data['temp_min'];
     newRow.insertCell(6).innerHTML = data['temp_max'];
+};
+
+function getData(parameter){
+    return new Promise((resolve,reject) => {
+        fetch(`https://apiprevmet3.inmet.gov.br/previsao/${parameter}`)
+            .then(response => {
+                if(response.status === 200){
+                    return response.json();
+                };
+                return Promise.reject('Erro no fetch');
+            })
+            .then(data => {
+                resolve(data);
+            })
+            .catch(erro => {
+                console.log(erro);
+                reject(erro);
+            })
+            .finally(() => {
+                document.querySelector('#state').disabled = false;
+                document.querySelector('#city').disabled = false;
+            });
+    });
 };

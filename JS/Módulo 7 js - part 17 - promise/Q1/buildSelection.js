@@ -41,10 +41,9 @@ export function buildCitysSelect(state){
     item.value = 'init';
     item.innerHTML = 'Selecione uma cidade';
     cityInput.appendChild(item);
-    cityInput.disabled = false;    
-    console.log(state);
-    let p = fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${state}/municipios`);    
-    p.then(response => response.json()).then(data => {
+    cityInput.disabled = false;
+    let info = getData(state);
+    info.then(data => {
         console.log(data);
         data.forEach((element)=>{
             let city = element.nome;
@@ -53,9 +52,28 @@ export function buildCitysSelect(state){
             item.value = geocode;
             item.innerHTML = city;
             cityInput.appendChild(item);
-        })
-        
+        });
     });
-}
-
-// export {startStates,buildCitysSelect};
+};
+function getData(parameter){
+    return new Promise((resolve,reject) => {
+        fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${parameter}/municipios`)
+            .then(response => {
+                if(response.status === 200){
+                    return response.json();
+                };
+                return Promise.reject('Erro no fetch');
+            })
+            .then(data => {
+                resolve(data);
+            })
+            .catch(erro => {
+                console.log(erro);
+                reject(erro);
+            })
+            .finally(() => {
+                document.querySelector('#state').disabled = false;
+                document.querySelector('#city').disabled = false;
+            });
+    });
+};
